@@ -97,7 +97,7 @@
     "lint:js": "npm run lint:eslint -- . ",
     "lint:watch": "esw app --color -w",
     "extract-intl": "NODE_ENV=development extract-messages -l=en,pl -o src/translations -d en --flat true 'src/**/!(*.test).js'",
-    "start": "run-p start:**",
+    "start": "npm run build && cd backend && node index.js",
     "start:app": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
